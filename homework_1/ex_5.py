@@ -33,11 +33,12 @@ def create_random_list(min, max, total, accuracy):
 
 # расчёт расстояния, на вход подаются списки с координатами и размерность пространства.
 # Важно! размеры списков должны совпадать и соответсвовать размерности
+# По сути - это решение, пара строк, всё остальное лишь надстройки, хех
 def calculate_total_distance(a, b, dimension):
     distance = 0
     for i in range(dimension):
         distance += (a[i] - b[i])**2
-    return distance
+    return distance**(0.5)
 
 # Ввод псевдорандомом
 def calculate_with_random(dimension):
@@ -88,6 +89,7 @@ def distance_calculator ():
         input_type = input('Выберите способ ввода координат точек: 1 - вручную или 2 - псевдорандомом: ')
         if input_type == '1' or input_type == '2': flag = False
         else: print('Пожалуйста выберите опцию 1 или 2')    
+    print()
 
     #  считаем 
     total_distance = 0
