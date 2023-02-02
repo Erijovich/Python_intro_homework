@@ -4,6 +4,8 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
+# знаю, можно через строку, но, кажется, это читерство.. 
+
 from fractions import Fraction
 
 def num_input (invite_msg):
