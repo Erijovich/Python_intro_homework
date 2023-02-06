@@ -1,10 +1,7 @@
-# Урок 2. Циклы (for, while)
 # Напишите программу, которая принимает на вход вещественное число и показывает сумму его цифр.
 # Пример:
 # - 6782 -> 23
 # - 0,56 -> 11
-
-# знаю, можно через строку, но, кажется, это читерство.. 
 
 from fractions import Fraction
 
@@ -33,12 +30,16 @@ def num_length(n):
 
 def sum_of_nums(len):
     sum = 0
+    n=len
     while len > 0:
         a = n%(10**(len))// (10**(len-1))
         len -= 1
         sum = sum + a
     return sum
 
+def start():
+    print()
+    n = convert_fract_to_whole(num_input("Введите число: "))
+    print (f"Сумма цифр равна: {sum_of_nums(n)}")
 
-n = convert_fract_to_whole(num_input("Введите число: "))
-print (f"Сумма цифр равна: {sum_of_nums(n)}")
+# start()
