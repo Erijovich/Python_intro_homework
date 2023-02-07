@@ -140,7 +140,34 @@ exeption_msg = 'Только целые числа!'
 
 Ключевой код:
 ```
+def generate_random_map(array):  
+    map = list()
+    while len(map)< len(array):
+        item = random.randrange(len(array)) 
+        if item not in map:
+            map.append(item)
+    return map
+
+def rearrange_list(array, map):
+    rearranged_list = list(range(len(array)))
+    j=0
+    for i in map:
+        rearranged_list[i] = array[j]
+        j+=1
+    return(rearranged_list)
+
+
+def start():  
+    print(f'Алгоритм перемешивания списка INT чисел, но он также подходит и для любых типов элементов')
+    array = generate_random_int_list(input_int_number(msg_total),input_int_number(msg_bound),input_int_number(msg_bound))
+    print('Сгенерированный список:\n', array)
+    print('Карта индексов:\n', map:=generate_random_map(array))
+    print('Перемешанный список:\n', rearrange_list(array, map))
+
+msg_total = 'Введите размер списка: '
+msg_bound = 'Введите границу списка: '
+msg_exep = 'Только целые числа!'
 
 ```
 
-### Результат выполнения программы
+### Результат выполнения программы:
