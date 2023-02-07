@@ -12,16 +12,17 @@ tasks_list = {
              }
 
 msg_intro = 'Домашняя работа №2\nкурс "знакомство с языком Python"'
-msg_start = 'Пожалуйста, выберите номер задания. Нажатие любой другой клавиши позволит закончить выполнение программы\nНомер задания:'
+msg_start = 'Пожалуйста, выберите номер задания. Нажатие любой другой клавиши позволит закончить выполнение программы\nНомер задания: '
 msg_fin = 'Вы хотите завершить программу? 1 - нет, любой другой ввод - да: '
 msg_goodbye = 'Вы завершили работу программы, bye-bye'
 
 os.system('cls')
+print()
 print(msg_intro)
+for i in tasks_list: print(f'{i}) {tasks_list[i]}')
 flag = True
 while flag:
-    print()
-    for i in tasks_list: print(f'{i}) {tasks_list[i]}')
+    print()    
     user_choise = input(msg_start)
     match user_choise:
         case '1': ex_1.start()
